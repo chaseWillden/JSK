@@ -51,14 +51,18 @@ var htmlString = d.build();
 To include a module, use ```include()``` followed by the module or file path name
 
 *Eample*
-    // Module
-    var fs = include('fs');
-    // File
-    var test = include('test/testFile.js');
+
+```
+// Module
+var fs = include('fs');
+// File
+var test = include('test/testFile.js');
+```
 
 To included file assign the return object to the variable send
 
 *Example*
+
 ```
 var test = {
 	a: 'test',
