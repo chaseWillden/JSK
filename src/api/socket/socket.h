@@ -55,7 +55,7 @@ namespace JSK{
 			int port;
 			const char* listenMsg;
 			const char* writeMsg;
-			Handle<Function> callback;
+			Handle<Object> callback;
 			Handle<Object> getCallback;
 			bool hasGet;
 
@@ -82,6 +82,7 @@ namespace JSK{
 		void ListenWrapper(const FunctionCallbackInfo<Value>& args);
 		void GenerateListen(const FunctionCallbackInfo<Value>& args);
 		void doprocessing (int sock, const FunctionCallbackInfo<Value>& args);
+		void StartWrapper(const FunctionCallbackInfo<Value>& args);
 	}
 }
 

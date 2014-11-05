@@ -22,26 +22,25 @@
 import os
 import sys
 import platform
+import re
+import string
+
+
+def ReadFile(filename):
+  file = open(filename, "rt")
+  try:
+    lines = file.read()
+  finally:
+    file.close()
+  return lines
 
 def get_ccs():
-  return [
-    'src/include/include.cc',
-    'src/api/os/os.cc',
-    'src/api/fs/fs.cc',
-    'src/api/http/http.cc',
-    'src/common/format/format.cc',
-    'src/api/shell/shell.cc',
-    'src/common/globals/globals.cc',
-    'src/api/socket/socket.cc',
-    'src/common/env.cc',
-    'src/api/window/window.cc',
-    'src/api/window/window.mm'
-  ]
+  resources = ReadFile(str('src/resources/cFiles.jsk'))
+  return resources.replace('\n', '').split(',')
 
 def get_objc():
-  return [
-    'src/api/window/window.mm'
-  ]
+  resources = ReadFile(str('src/resources/objcFiles.jsk'))
+  return resources.replace('\n', '').split(',')
 
 def main():
   if (len(sys.argv) < 2):
@@ -55,7 +54,7 @@ def main():
     os.system('make -C deps/v8 ' + make_type)
   if (build_type == 'build'):
     print("Pulling in resources...AKA, all of the JS files")
-    os.system('tools/js2c.py src/js_natives.h src/resources/resources.jsk');
+    os.system('tools/js2c.py src/js_natives.h src/resources/nativeJs.jsk');
     print("Completed")
     print("Building System")
     pre = 'clang++ -lcurl -Iinclude deps/v8/out/native/libv8_base.a deps/v8/out/native/libv8_libbase.a deps/v8/out/native/libv8_snapshot.a deps/v8/out/native/libicudata.a deps/v8/out/native/libicuuc.a deps/v8/out/native/libicui18n.a'

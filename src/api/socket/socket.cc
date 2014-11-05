@@ -50,11 +50,16 @@ namespace JSK{
 			SocketObject->Set(String::NewFromUtf8(isolate, "get"), Function::New(isolate, GetWrapper));
 			SocketObject->Set(String::NewFromUtf8(isolate, "close"), Function::New(isolate, CloseWrapper));
 			response->Set(String::NewFromUtf8(isolate, "write"), Function::New(isolate, WriteWrapper));
+			response->Set(String::NewFromUtf8(isolate, "start"), Function::New(isolate, StartWrapper));
 
 			args.GetReturnValue().Set(SocketObject);
 			globalResponseObj = response;
 			globalSocketObj = SocketObject;
 			return 1;
+		}
+
+		void StartWrapper(const FunctionCallbackInfo<Value>& args){
+			_socket->writeMsg = " ";
 		}
 
 		void GetWrapper(const FunctionCallbackInfo<Value>& args){
@@ -107,16 +112,16 @@ namespace JSK{
 
 			// var s = h.createServer(function(req,res){print(req);print(res);})
 			if (args[2]->IsFunction()){
-				Local<Object> funcObj = args[2]->ToObject();
+				_socket->callback = args[2]->ToObject();
 				global = args.GetIsolate()->GetCurrentContext()->Global();
 				globalSocketObj = global->Get(String::NewFromUtf8(args.GetIsolate(), "socket"))->ToObject()->ToObject();
 				globalRequestObj = globalSocketObj->Get(String::NewFromUtf8(args.GetIsolate(), "response"))->ToObject();
 				Handle<Value> argv[] = {
 					globalRequestObj,
-					globalSocketObj->Get(String::NewFromUtf8(args.GetIsolate(), "request"))->ToObject()
+					String::NewFromUtf8(args.GetIsolate(), "")
 				};
-				if (funcObj->IsCallable())
-					funcObj->CallAsFunction(args.This(), 2, argv);
+				if (_socket->callback->IsCallable())
+					_socket->callback->CallAsFunction(args.This(), 2, argv);
 			}
 
 			GenerateListen(args);
@@ -162,7 +167,20 @@ namespace JSK{
 					};
 					header = strtok (NULL, ":");
 				}
-				this->obj->Set(String::NewFromUtf8(isolate, name), String::NewFromUtf8(isolate, value));
+				printf("%s\n", name);
+				printf("%s\n", value);
+				printf("%s\n", " ");
+				if (strlen(value) < 1){
+					Local<Value> strName = String::NewFromUtf8(isolate, name);
+					Local<Value> strValue = String::NewFromUtf8(isolate, "Nope");
+					this->obj->Set(strName, strValue);
+				}
+				else{
+					Local<Value> strName = String::NewFromUtf8(isolate, name);
+					Local<Value> strValue = String::NewFromUtf8(isolate, value);
+					this->obj->Set(strName, strValue);
+				}
+									
 			}
 		}
 
@@ -264,6 +282,15 @@ namespace JSK{
 				};
 				// Call the get method now
 				_socket->getCallback->CallAsFunction(args.This(), 2, argv);
+			}
+			else{
+				Handle<Value> argv[] = {
+					globalRequestObj,
+					request->obj
+				};
+				if (_socket->callback->IsCallable()){
+					_socket->callback->CallAsFunction(args.This(), 2, argv);
+				}
 			}
 
 			n = write(sock, _socket->writeMsg, strlen(_socket->writeMsg));
