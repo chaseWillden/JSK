@@ -1,0 +1,4 @@
+cmd_/Users/willdech/Documents/dev/v8/out/native/obj.target/icudata/third_party/icu/mac/icudtl_dat.o := cc '-DU_USING_ICU_NAMESPACE=0' '-DHAVE_DLOPEN=0' '-DU_STATIC_IMPLEMENTATION' '-DV8_TARGET_ARCH_X64' '-DU_HIDE_DATA_SYMBOL' -I../third_party/icu/source/common -I../third_party/icu/source/i18n  -O3 -gdwarf-2 -fstrict-aliasing -fvisibility=hidden -mmacosx-version-min=10.5 -arch x86_64 -Wall -Wendif-labels -W -Wno-unused-parameter -Wno-missing-field-initializers -std=c99 -fno-strict-aliasing -MMD -MF /Users/willdech/Documents/dev/v8/out/native/.deps//Users/willdech/Documents/dev/v8/out/native/obj.target/icudata/third_party/icu/mac/icudtl_dat.o.d.raw  -c -o /Users/willdech/Documents/dev/v8/out/native/obj.target/icudata/third_party/icu/mac/icudtl_dat.o ../third_party/icu/mac/icudtl_dat.S
+/Users/willdech/Documents/dev/v8/out/native/obj.target/icudata/third_party/icu/mac/icudtl_dat.o: \
+  ../third_party/icu/mac/icudtl_dat.S
+../third_party/icu/mac/icudtl_dat.S:

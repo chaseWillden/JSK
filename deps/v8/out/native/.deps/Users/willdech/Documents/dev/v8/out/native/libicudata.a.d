@@ -1,0 +1,1 @@
+cmd_/Users/willdech/Documents/dev/v8/out/native/libicudata.a := rm -f /Users/willdech/Documents/dev/v8/out/native/libicudata.a && ./gyp-mac-tool filter-libtool libtool  -static -o /Users/willdech/Documents/dev/v8/out/native/libicudata.a /Users/willdech/Documents/dev/v8/out/native/obj.target/icudata/third_party/icu/mac/icudtl_dat.o

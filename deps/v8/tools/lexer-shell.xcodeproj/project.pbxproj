@@ -1,0 +1,1096 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		A223A73E4BC00F7FC5EAF9B6 /* All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E75F3B0852264A1DF0403E63 /* Build configuration list for PBXAggregateTarget "All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				0F46F5A814205B09F2BB550E /* PBXTargetDependency */,
+				0C5CECD3ACCE12AFFE62DADD /* PBXTargetDependency */,
+			);
+			name = All;
+			productName = All;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		2C0CB1DC6D9F6AB29FD6CCDD /* libv8_snapshot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0448F610E5AA412D2B5A133 /* libv8_snapshot.a */; };
+		3B6D6F643DABBCD5F6E4DD4C /* libicudata.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88278294F2B00DF8FA0171D /* libicudata.a */; };
+		3E5C2217493B3626CA354D3A /* libv8_libbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB7F1C8DFE94A87A8A0E5C4 /* libv8_libbase.a */; };
+		47348EA55134192067E52716 /* libicudata.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D88278294F2B00DF8FA0171D /* libicudata.a */; };
+		6497ABD4648A9A466529941B /* parser-shell.cc in Sources */ = {isa = PBXBuildFile; fileRef = 1EFB7E6008BC06A33EB2E8A3 /* parser-shell.cc */; };
+		6D23CE180B9A26CBBDE52905 /* libicuuc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA30030B15730EB7894342F /* libicuuc.a */; };
+		73C5F77C34BBA7A2A69321A3 /* libv8_base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B48FC98F4E66B19C72684BAF /* libv8_base.a */; };
+		92E0C6297449452E82BFC243 /* libicui18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 529343594838D10C71057A48 /* libicui18n.a */; };
+		A35CA88B8E44A54F56DA6EC1 /* libicuuc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BA30030B15730EB7894342F /* libicuuc.a */; };
+		A98BE4143007B3AD18F07C17 /* lexer-shell.cc in Sources */ = {isa = PBXBuildFile; fileRef = 378A4FAD84956699CDD48565 /* lexer-shell.cc */; };
+		AA71B67A8190874B75F569B8 /* libv8_libplatform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77083706DD3DDB40ACFC7E8E /* libv8_libplatform.a */; };
+		B825CC823A44908A1C7FB83A /* libicui18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 529343594838D10C71057A48 /* libicui18n.a */; };
+		C6766138183F103899E92DD1 /* libv8_base.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B48FC98F4E66B19C72684BAF /* libv8_base.a */; };
+		CB70E9ADEF6B7866F9CE6B48 /* libv8_libplatform.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 77083706DD3DDB40ACFC7E8E /* libv8_libplatform.a */; };
+		E026D87A44EB779169DAB3BD /* libv8_snapshot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0448F610E5AA412D2B5A133 /* libv8_snapshot.a */; };
+		F1B83502F57CA270AE91A5E1 /* libv8_libbase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CB7F1C8DFE94A87A8A0E5C4 /* libv8_libbase.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0BFAD51AD738FBC14237A23A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 554758952FC3AF9BD4BA01ED;
+			remoteInfo = js2c;
+		};
+		1C26945CF3AFE93E8C1E2600 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA65271C3D0F7C3383C07B9B;
+			remoteInfo = v8_snapshot;
+		};
+		1D8F3A710388C9D1397ECE70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F254D34C24C76377F3729B84;
+			remoteInfo = v8_base;
+		};
+		1E8427968A87C3AF35BBC94E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F254D34C24C76377F3729B84;
+			remoteInfo = v8_base;
+		};
+		21602BCB7DD968F1A7A03AFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBF1D2D72FDA6276C4811B3 /* icu.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A8365F341FF32481B097DC30;
+			remoteInfo = icuuc;
+		};
+		2A8E5A338F26EC3091B9DBD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 619A3AE13621D24357F62FF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E0B6CEC7FDD45FB6A08F6348;
+			remoteInfo = "parser-shell";
+		};
+		2D8A7CADCF34B21F3CC21709 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D031ED9682F21360344042FF;
+			remoteInfo = mksnapshot;
+		};
+		2F23E4AE581F32A45E92CA43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9ECCDE91D9EA1FE332B22C55;
+			remoteInfo = v8_libbase;
+		};
+		32C384713855E2BEE55BABF6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 451E0376C6ED476190E95DA1;
+			remoteInfo = v8_libplatform;
+		};
+		33C5ADA39E953DE6C5F89172 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBF1D2D72FDA6276C4811B3 /* icu.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F46C1033BA316E88C6721A96;
+			remoteInfo = icudata;
+		};
+		443A0104194DB851DDD0576F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBF1D2D72FDA6276C4811B3 /* icu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 232F791EEF1663B99B3948A0;
+			remoteInfo = icudata;
+		};
+		4A06747213F5949CFA7CE1C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 26A73E70B3C5D4B7FE523A1A;
+			remoteInfo = v8;
+		};
+		676792C1D8697BE08D991F36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5AF7710A7C268F6340457FCF;
+			remoteInfo = v8_external_snapshot;
+		};
+		73969A85683E688A989002A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBF1D2D72FDA6276C4811B3 /* icu.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 438C51A5B19300095C141CAB;
+			remoteInfo = icui18n;
+		};
+		759FA80252BCA496FE901481 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B343B0B4A8EF8E9514F7C791;
+			remoteInfo = v8_snapshot;
+		};
+		7D5FEFC66E845E7F5C3AF1E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 76808CD7B8548E9CADFE2761;
+			remoteInfo = v8_libbase;
+		};
+		853BBC7BA8723726FBC347A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBF1D2D72FDA6276C4811B3 /* icu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C08DF88BB43555FDD0E6951C;
+			remoteInfo = icui18n;
+		};
+		8ABDC32F192C023C4AA8DE68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 554758952FC3AF9BD4BA01ED;
+			remoteInfo = js2c;
+		};
+		9204195D13E93A4D49D882FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBF1D2D72FDA6276C4811B3 /* icu.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 47A48DEFDFDD22CF05CDA95B;
+			remoteInfo = icuuc;
+		};
+		9746262D18B17644B9CF559C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC1F34142EA542A84E75D457;
+			remoteInfo = v8_nosnapshot;
+		};
+		97CFCB187FE71CA28EC2AD19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 26A73E70B3C5D4B7FE523A1A;
+			remoteInfo = v8;
+		};
+		9ACB09FB082CB4A8E9BD9B5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBF1D2D72FDA6276C4811B3 /* icu.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 438C51A5B19300095C141CAB;
+			remoteInfo = icui18n;
+		};
+		AB2E68907A0F86F4588D740B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBF1D2D72FDA6276C4811B3 /* icu.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A8365F341FF32481B097DC30;
+			remoteInfo = icuuc;
+		};
+		BA6855186440B26A665D4C62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9ECCDE91D9EA1FE332B22C55;
+			remoteInfo = v8_libbase;
+		};
+		BB7E97A3928D4BD8DDC76BD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 792C62A0E4868989A4A36A3E;
+			remoteInfo = v8_libplatform;
+		};
+		BEB7FB8CBC62AB2F239749AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 26273B5082FD9E2952EA55E6;
+			remoteInfo = v8_base;
+		};
+		C0C65AB1D32573441B4F5405 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DBF1D2D72FDA6276C4811B3 /* icu.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F46C1033BA316E88C6721A96;
+			remoteInfo = icudata;
+		};
+		E4966F3C86E283969EDA6099 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 792C62A0E4868989A4A36A3E;
+			remoteInfo = v8_libplatform;
+		};
+		EC7CD7F7ECC382DE9F15BBC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 619A3AE13621D24357F62FF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 892FBEE0755AB8081C5363A1;
+			remoteInfo = "lexer-shell";
+		};
+		FE2771CE141CB427988B58DD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B343B0B4A8EF8E9514F7C791;
+			remoteInfo = v8_snapshot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1EFB7E6008BC06A33EB2E8A3 /* parser-shell.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "parser-shell.cc"; sourceTree = "<group>"; };
+		378A4FAD84956699CDD48565 /* lexer-shell.cc */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "lexer-shell.cc"; sourceTree = "<group>"; };
+		37C2A826175F1147BBA1EB03 /* lexer-shell.gyp */ = {isa = PBXFileReference; explicitFileType = sourcecode; path = "lexer-shell.gyp"; sourceTree = "<group>"; };
+		3DBF1D2D72FDA6276C4811B3 /* icu.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = icu.xcodeproj; path = ../third_party/icu/icu.xcodeproj; sourceTree = SOURCE_ROOT; };
+		47E50C211021C75C67E3B680 /* standalone.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = standalone.gypi; path = ../build/standalone.gypi; sourceTree = "<group>"; };
+		774057D3B875357C47E02D10 /* lexer-shell */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "lexer-shell"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8691B0D9F8FCB72FAD180813 /* toolchain.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = toolchain.gypi; path = ../build/toolchain.gypi; sourceTree = "<group>"; };
+		A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = v8.xcodeproj; path = gyp/v8.xcodeproj; sourceTree = SOURCE_ROOT; };
+		F0816044691DC938CA4513FE /* shell-utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "shell-utils.h"; sourceTree = "<group>"; };
+		F6A83C47D2A1415183AEE237 /* features.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = features.gypi; path = ../build/features.gypi; sourceTree = "<group>"; };
+		FBC1787BBAF228F6B216A288 /* parser-shell */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "parser-shell"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1511DB659865234B58BC1334 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB70E9ADEF6B7866F9CE6B48 /* libv8_libplatform.a in Frameworks */,
+				B825CC823A44908A1C7FB83A /* libicui18n.a in Frameworks */,
+				6D23CE180B9A26CBBDE52905 /* libicuuc.a in Frameworks */,
+				C6766138183F103899E92DD1 /* libv8_base.a in Frameworks */,
+				F1B83502F57CA270AE91A5E1 /* libv8_libbase.a in Frameworks */,
+				47348EA55134192067E52716 /* libicudata.a in Frameworks */,
+				2C0CB1DC6D9F6AB29FD6CCDD /* libv8_snapshot.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD62C0D50F44E8FBB20BEA02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA71B67A8190874B75F569B8 /* libv8_libplatform.a in Frameworks */,
+				92E0C6297449452E82BFC243 /* libicui18n.a in Frameworks */,
+				A35CA88B8E44A54F56DA6EC1 /* libicuuc.a in Frameworks */,
+				73C5F77C34BBA7A2A69321A3 /* libv8_base.a in Frameworks */,
+				3E5C2217493B3626CA354D3A /* libv8_libbase.a in Frameworks */,
+				3B6D6F643DABBCD5F6E4DD4C /* libicudata.a in Frameworks */,
+				E026D87A44EB779169DAB3BD /* libv8_snapshot.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0BEC18CD993666C082DCBA1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D88278294F2B00DF8FA0171D /* libicudata.a */,
+				529343594838D10C71057A48 /* libicui18n.a */,
+				6BA30030B15730EB7894342F /* libicuuc.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F72EDAAB22C92701741622E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0448F610E5AA412D2B5A133 /* libv8_snapshot.a */,
+				1D17E52FC915D14A7DAADB3E /* libv8_nosnapshot.a */,
+				18C97AE7F4914A38325BE2B3 /* libv8_external_snapshot.a */,
+				B48FC98F4E66B19C72684BAF /* libv8_base.a */,
+				6CB7F1C8DFE94A87A8A0E5C4 /* libv8_libbase.a */,
+				77083706DD3DDB40ACFC7E8E /* libv8_libplatform.a */,
+				D57D956D57155243EFEF68B6 /* mksnapshot */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F0C92C6A8634E4B0A11E4E1 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				378A4FAD84956699CDD48565 /* lexer-shell.cc */,
+				1EFB7E6008BC06A33EB2E8A3 /* parser-shell.cc */,
+				F0816044691DC938CA4513FE /* shell-utils.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		5C7E26E0A73FDE1B5D12630F = {
+			isa = PBXGroup;
+			children = (
+				1F0C92C6A8634E4B0A11E4E1 /* Source */,
+				680BCDAA52AF211AC9596E6B /* Projects */,
+				E5AFF9EFF7B9987D3C19368F /* Products */,
+				86B9B2D6CB5595C2F27EE85C /* Build */,
+			);
+			sourceTree = "<group>";
+		};
+		680BCDAA52AF211AC9596E6B /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF1D2D72FDA6276C4811B3 /* icu.xcodeproj */,
+				A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		86B9B2D6CB5595C2F27EE85C /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				F6A83C47D2A1415183AEE237 /* features.gypi */,
+				37C2A826175F1147BBA1EB03 /* lexer-shell.gyp */,
+				47E50C211021C75C67E3B680 /* standalone.gypi */,
+				8691B0D9F8FCB72FAD180813 /* toolchain.gypi */,
+			);
+			name = Build;
+			sourceTree = "<group>";
+		};
+		E5AFF9EFF7B9987D3C19368F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				774057D3B875357C47E02D10 /* lexer-shell */,
+				FBC1787BBAF228F6B216A288 /* parser-shell */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		892FBEE0755AB8081C5363A1 /* lexer-shell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5C5F99F99D483A0E89C64DE /* Build configuration list for PBXNativeTarget "lexer-shell" */;
+			buildPhases = (
+				02E0833DAE12CFAC343646F6 /* Sources */,
+				DD62C0D50F44E8FBB20BEA02 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				24A074EEEB6BE3E3F94DF24D /* PBXTargetDependency */,
+				1DBBA98CF1B433BCD4AB810B /* PBXTargetDependency */,
+				84E75F8F1D6B63C64F4286DC /* PBXTargetDependency */,
+				3C05574F454F37DECE243A23 /* PBXTargetDependency */,
+				AD648791368D6D6D6557EBB5 /* PBXTargetDependency */,
+				01863720448454957C6C188A /* PBXTargetDependency */,
+				5014E15983895ED900C14D6E /* PBXTargetDependency */,
+				486EC13F1CCA0036A3A7A5D8 /* PBXTargetDependency */,
+				5188AC93564CB33EE348300F /* PBXTargetDependency */,
+			);
+			name = "lexer-shell";
+			productName = "lexer-shell";
+			productReference = 774057D3B875357C47E02D10 /* lexer-shell */;
+			productType = "com.apple.product-type.tool";
+		};
+		E0B6CEC7FDD45FB6A08F6348 /* parser-shell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FF290DD77B456655A92F78D /* Build configuration list for PBXNativeTarget "parser-shell" */;
+			buildPhases = (
+				9F6159F68A39F64B4ED630C7 /* Sources */,
+				1511DB659865234B58BC1334 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAAC11B07FD08DC920476F2F /* PBXTargetDependency */,
+				165A396424F3DE2133DB5F13 /* PBXTargetDependency */,
+				9720033833EAE85B8CB5F5D6 /* PBXTargetDependency */,
+				9CFE920B1FB8144EBA3A6090 /* PBXTargetDependency */,
+				9EDB40F8F80E0CFF77760168 /* PBXTargetDependency */,
+				207AC9A53BCC7007E7644AFE /* PBXTargetDependency */,
+				B00F5AFF9C583FE5860200E2 /* PBXTargetDependency */,
+				3C16678F8572845EFED237B8 /* PBXTargetDependency */,
+				CB8292F87698CB504D34C9EA /* PBXTargetDependency */,
+			);
+			name = "parser-shell";
+			productName = "parser-shell";
+			productReference = FBC1787BBAF228F6B216A288 /* parser-shell */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		619A3AE13621D24357F62FF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = D1878F7477E3E0077D5E4845 /* Build configuration list for PBXProject "lexer-shell" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 5C7E26E0A73FDE1B5D12630F;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0BEC18CD993666C082DCBA1E /* Products */;
+					ProjectRef = 3DBF1D2D72FDA6276C4811B3 /* icu.xcodeproj */;
+				},
+				{
+					ProductGroup = 0F72EDAAB22C92701741622E /* Products */;
+					ProjectRef = A59D7B330D58CFA76C83F7A8 /* v8.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A223A73E4BC00F7FC5EAF9B6 /* All */,
+				892FBEE0755AB8081C5363A1 /* lexer-shell */,
+				E0B6CEC7FDD45FB6A08F6348 /* parser-shell */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		18C97AE7F4914A38325BE2B3 /* libv8_external_snapshot.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libv8_external_snapshot.a;
+			remoteRef = 676792C1D8697BE08D991F36 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1D17E52FC915D14A7DAADB3E /* libv8_nosnapshot.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libv8_nosnapshot.a;
+			remoteRef = 9746262D18B17644B9CF559C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		529343594838D10C71057A48 /* libicui18n.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libicui18n.a;
+			remoteRef = 853BBC7BA8723726FBC347A1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6BA30030B15730EB7894342F /* libicuuc.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libicuuc.a;
+			remoteRef = 9204195D13E93A4D49D882FD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6CB7F1C8DFE94A87A8A0E5C4 /* libv8_libbase.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libv8_libbase.a;
+			remoteRef = 7D5FEFC66E845E7F5C3AF1E8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		77083706DD3DDB40ACFC7E8E /* libv8_libplatform.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libv8_libplatform.a;
+			remoteRef = 32C384713855E2BEE55BABF6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B48FC98F4E66B19C72684BAF /* libv8_base.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libv8_base.a;
+			remoteRef = BEB7FB8CBC62AB2F239749AA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C0448F610E5AA412D2B5A133 /* libv8_snapshot.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libv8_snapshot.a;
+			remoteRef = 1C26945CF3AFE93E8C1E2600 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D57D956D57155243EFEF68B6 /* mksnapshot */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = mksnapshot;
+			remoteRef = 2D8A7CADCF34B21F3CC21709 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D88278294F2B00DF8FA0171D /* libicudata.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libicudata.a;
+			remoteRef = 443A0104194DB851DDD0576F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		02E0833DAE12CFAC343646F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A98BE4143007B3AD18F07C17 /* lexer-shell.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F6159F68A39F64B4ED630C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6497ABD4648A9A466529941B /* parser-shell.cc in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		01863720448454957C6C188A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = v8_libbase;
+			targetProxy = 2F23E4AE581F32A45E92CA43 /* PBXContainerItemProxy */;
+		};
+		0C5CECD3ACCE12AFFE62DADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E0B6CEC7FDD45FB6A08F6348 /* parser-shell */;
+			targetProxy = 2A8E5A338F26EC3091B9DBD4 /* PBXContainerItemProxy */;
+		};
+		0F46F5A814205B09F2BB550E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 892FBEE0755AB8081C5363A1 /* lexer-shell */;
+			targetProxy = EC7CD7F7ECC382DE9F15BBC4 /* PBXContainerItemProxy */;
+		};
+		165A396424F3DE2133DB5F13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = v8_libplatform;
+			targetProxy = E4966F3C86E283969EDA6099 /* PBXContainerItemProxy */;
+		};
+		1DBBA98CF1B433BCD4AB810B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = v8_libplatform;
+			targetProxy = BB7E97A3928D4BD8DDC76BD9 /* PBXContainerItemProxy */;
+		};
+		207AC9A53BCC7007E7644AFE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = v8_libbase;
+			targetProxy = BA6855186440B26A665D4C62 /* PBXContainerItemProxy */;
+		};
+		24A074EEEB6BE3E3F94DF24D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = v8;
+			targetProxy = 97CFCB187FE71CA28EC2AD19 /* PBXContainerItemProxy */;
+		};
+		3C05574F454F37DECE243A23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = icuuc;
+			targetProxy = AB2E68907A0F86F4588D740B /* PBXContainerItemProxy */;
+		};
+		3C16678F8572845EFED237B8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = v8_snapshot;
+			targetProxy = 759FA80252BCA496FE901481 /* PBXContainerItemProxy */;
+		};
+		486EC13F1CCA0036A3A7A5D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = v8_snapshot;
+			targetProxy = FE2771CE141CB427988B58DD /* PBXContainerItemProxy */;
+		};
+		5014E15983895ED900C14D6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = icudata;
+			targetProxy = 33C5ADA39E953DE6C5F89172 /* PBXContainerItemProxy */;
+		};
+		5188AC93564CB33EE348300F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = js2c;
+			targetProxy = 0BFAD51AD738FBC14237A23A /* PBXContainerItemProxy */;
+		};
+		84E75F8F1D6B63C64F4286DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = icui18n;
+			targetProxy = 9ACB09FB082CB4A8E9BD9B5A /* PBXContainerItemProxy */;
+		};
+		9720033833EAE85B8CB5F5D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = icui18n;
+			targetProxy = 73969A85683E688A989002A8 /* PBXContainerItemProxy */;
+		};
+		9CFE920B1FB8144EBA3A6090 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = icuuc;
+			targetProxy = 21602BCB7DD968F1A7A03AFB /* PBXContainerItemProxy */;
+		};
+		9EDB40F8F80E0CFF77760168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = v8_base;
+			targetProxy = 1D8F3A710388C9D1397ECE70 /* PBXContainerItemProxy */;
+		};
+		AD648791368D6D6D6557EBB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = v8_base;
+			targetProxy = 1E8427968A87C3AF35BBC94E /* PBXContainerItemProxy */;
+		};
+		B00F5AFF9C583FE5860200E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = icudata;
+			targetProxy = C0C65AB1D32573441B4F5405 /* PBXContainerItemProxy */;
+		};
+		CB8292F87698CB504D34C9EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = js2c;
+			targetProxy = 8ABDC32F192C023C4AA8DE68 /* PBXContainerItemProxy */;
+		};
+		DAAC11B07FD08DC920476F2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = v8;
+			targetProxy = 4A06747213F5949CFA7CE1C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09679077AC08AE2F0D0C19BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = All;
+			};
+			name = Debug;
+		};
+		0AD658010E0B81A850D5EAF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				EXECUTABLE_PREFIX = "";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					V8_TARGET_ARCH_X64,
+					ENABLE_GDB_JIT_INTERFACE,
+					V8_DEPRECATION_WARNINGS,
+					V8_I18N_SUPPORT,
+					"U_USING_ICU_NAMESPACE=0",
+					"U_ENABLE_DYLOAD=0",
+					U_STATIC_IMPLEMENTATION,
+					ENABLE_DISASSEMBLER,
+					V8_ENABLE_CHECKS,
+					OBJECT_PRINT,
+					VERIFY_HEAP,
+					DEBUG,
+					ENABLE_EXTRA_CHECKS,
+					ENABLE_HANDLE_ZAPPING,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_THREADSAFE_STATICS = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				HEADER_SEARCH_PATHS = (
+					..,
+					../include,
+					../third_party/icu/source/i18n,
+					../third_party/icu/source/common,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "-fno-strict-aliasing";
+				OTHER_LDFLAGS = "-Wl,-search_paths_first";
+				PREBINDING = NO;
+				PRODUCT_NAME = "parser-shell";
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+					"-Wno-missing-field-initializers",
+				);
+			};
+			name = Debug;
+		};
+		27A2EBEFB2C296E004B7E5F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				EXECUTABLE_PREFIX = "";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					V8_TARGET_ARCH_X64,
+					ENABLE_GDB_JIT_INTERFACE,
+					V8_DEPRECATION_WARNINGS,
+					V8_I18N_SUPPORT,
+					"U_USING_ICU_NAMESPACE=0",
+					"U_ENABLE_DYLOAD=0",
+					U_STATIC_IMPLEMENTATION,
+					ENABLE_HANDLE_ZAPPING,
+				);
+				GCC_STRICT_ALIASING = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_THREADSAFE_STATICS = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				HEADER_SEARCH_PATHS = (
+					..,
+					../include,
+					../third_party/icu/source/i18n,
+					../third_party/icu/source/common,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "-fno-strict-aliasing";
+				OTHER_LDFLAGS = "-Wl,-search_paths_first";
+				PREBINDING = NO;
+				PRODUCT_NAME = "lexer-shell";
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+					"-Wno-missing-field-initializers",
+				);
+			};
+			name = Release;
+		};
+		6AEB5DC2CDC1AEB30309AC4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = ../xcodebuild;
+			};
+			name = Debug;
+		};
+		85E60BFC5975CADBA56DEB1A /* Optdebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = All;
+			};
+			name = Optdebug;
+		};
+		864DF6358AE24EF426A4F4FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = All;
+			};
+			name = Release;
+		};
+		8AA7CDDA7FFF575092FDDC0B /* Optdebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				EXECUTABLE_PREFIX = "";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					V8_TARGET_ARCH_X64,
+					ENABLE_GDB_JIT_INTERFACE,
+					V8_DEPRECATION_WARNINGS,
+					V8_I18N_SUPPORT,
+					"U_USING_ICU_NAMESPACE=0",
+					"U_ENABLE_DYLOAD=0",
+					U_STATIC_IMPLEMENTATION,
+					ENABLE_DISASSEMBLER,
+					V8_ENABLE_CHECKS,
+					OBJECT_PRINT,
+					VERIFY_HEAP,
+					DEBUG,
+					ENABLE_EXTRA_CHECKS,
+					ENABLE_HANDLE_ZAPPING,
+				);
+				GCC_STRICT_ALIASING = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_THREADSAFE_STATICS = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				HEADER_SEARCH_PATHS = (
+					..,
+					../include,
+					../third_party/icu/source/i18n,
+					../third_party/icu/source/common,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "-fno-strict-aliasing";
+				OTHER_LDFLAGS = "-Wl,-search_paths_first";
+				PREBINDING = NO;
+				PRODUCT_NAME = "lexer-shell";
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+					"-Wno-missing-field-initializers",
+				);
+			};
+			name = Optdebug;
+		};
+		A3C6CC5EAF5A31BCEC20EA28 /* Optdebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = ../xcodebuild;
+			};
+			name = Optdebug;
+		};
+		B531A0B4E90C2DFD5BACE82F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INTERMEDIATE_DIR = "$(PROJECT_DERIVED_FILE_DIR)/$(CONFIGURATION)";
+				SHARED_INTERMEDIATE_DIR = "$(SYMROOT)/DerivedSources/$(CONFIGURATION)";
+				SYMROOT = ../xcodebuild;
+			};
+			name = Release;
+		};
+		E01C6001752D9A503A0DE773 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				EXECUTABLE_PREFIX = "";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					V8_TARGET_ARCH_X64,
+					ENABLE_GDB_JIT_INTERFACE,
+					V8_DEPRECATION_WARNINGS,
+					V8_I18N_SUPPORT,
+					"U_USING_ICU_NAMESPACE=0",
+					"U_ENABLE_DYLOAD=0",
+					U_STATIC_IMPLEMENTATION,
+					ENABLE_DISASSEMBLER,
+					V8_ENABLE_CHECKS,
+					OBJECT_PRINT,
+					VERIFY_HEAP,
+					DEBUG,
+					ENABLE_EXTRA_CHECKS,
+					ENABLE_HANDLE_ZAPPING,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_THREADSAFE_STATICS = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				HEADER_SEARCH_PATHS = (
+					..,
+					../include,
+					../third_party/icu/source/i18n,
+					../third_party/icu/source/common,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "-fno-strict-aliasing";
+				OTHER_LDFLAGS = "-Wl,-search_paths_first";
+				PREBINDING = NO;
+				PRODUCT_NAME = "lexer-shell";
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+					"-Wno-missing-field-initializers",
+				);
+			};
+			name = Debug;
+		};
+		EA0DE0CB66C715E8D586AF64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				EXECUTABLE_PREFIX = "";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					V8_TARGET_ARCH_X64,
+					ENABLE_GDB_JIT_INTERFACE,
+					V8_DEPRECATION_WARNINGS,
+					V8_I18N_SUPPORT,
+					"U_USING_ICU_NAMESPACE=0",
+					"U_ENABLE_DYLOAD=0",
+					U_STATIC_IMPLEMENTATION,
+					ENABLE_HANDLE_ZAPPING,
+				);
+				GCC_STRICT_ALIASING = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_THREADSAFE_STATICS = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				HEADER_SEARCH_PATHS = (
+					..,
+					../include,
+					../third_party/icu/source/i18n,
+					../third_party/icu/source/common,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "-fno-strict-aliasing";
+				OTHER_LDFLAGS = "-Wl,-search_paths_first";
+				PREBINDING = NO;
+				PRODUCT_NAME = "parser-shell";
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+					"-Wno-missing-field-initializers",
+				);
+			};
+			name = Release;
+		};
+		F32187C2AF93B879A746180C /* Optdebug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				EXECUTABLE_PREFIX = "";
+				GCC_CW_ASM_SYNTAX = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_PASCAL_STRINGS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					V8_TARGET_ARCH_X64,
+					ENABLE_GDB_JIT_INTERFACE,
+					V8_DEPRECATION_WARNINGS,
+					V8_I18N_SUPPORT,
+					"U_USING_ICU_NAMESPACE=0",
+					"U_ENABLE_DYLOAD=0",
+					U_STATIC_IMPLEMENTATION,
+					ENABLE_DISASSEMBLER,
+					V8_ENABLE_CHECKS,
+					OBJECT_PRINT,
+					VERIFY_HEAP,
+					DEBUG,
+					ENABLE_EXTRA_CHECKS,
+					ENABLE_HANDLE_ZAPPING,
+				);
+				GCC_STRICT_ALIASING = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_THREADSAFE_STATICS = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_NON_VIRTUAL_DESTRUCTOR = YES;
+				HEADER_SEARCH_PATHS = (
+					..,
+					../include,
+					../third_party/icu/source/i18n,
+					../third_party/icu/source/common,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				OTHER_CFLAGS = "-fno-strict-aliasing";
+				OTHER_LDFLAGS = "-Wl,-search_paths_first";
+				PREBINDING = NO;
+				PRODUCT_NAME = "parser-shell";
+				SYMROOT = ../xcodebuild;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wall",
+					"-Wendif-labels",
+					"-W",
+					"-Wno-unused-parameter",
+					"-Wno-missing-field-initializers",
+				);
+			};
+			name = Optdebug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FF290DD77B456655A92F78D /* Build configuration list for PBXNativeTarget "parser-shell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0AD658010E0B81A850D5EAF7 /* Debug */,
+				F32187C2AF93B879A746180C /* Optdebug */,
+				EA0DE0CB66C715E8D586AF64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Debug;
+		};
+		D1878F7477E3E0077D5E4845 /* Build configuration list for PBXProject "lexer-shell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AEB5DC2CDC1AEB30309AC4E /* Debug */,
+				A3C6CC5EAF5A31BCEC20EA28 /* Optdebug */,
+				B531A0B4E90C2DFD5BACE82F /* Release */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Debug;
+		};
+		E75F3B0852264A1DF0403E63 /* Build configuration list for PBXAggregateTarget "All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09679077AC08AE2F0D0C19BA /* Debug */,
+				85E60BFC5975CADBA56DEB1A /* Optdebug */,
+				864DF6358AE24EF426A4F4FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Debug;
+		};
+		F5C5F99F99D483A0E89C64DE /* Build configuration list for PBXNativeTarget "lexer-shell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E01C6001752D9A503A0DE773 /* Debug */,
+				8AA7CDDA7FFF575092FDDC0B /* Optdebug */,
+				27A2EBEFB2C296E004B7E5F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 1;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 619A3AE13621D24357F62FF2 /* Project object */;
+}
