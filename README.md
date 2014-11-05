@@ -85,24 +85,24 @@ The current solution is build specifically for Mac, I'll work on Windows in a li
 
 Required
 --------
-Clang++
-Python
+- Clang++
+- Python
 
 Build V8
 --------
 Go to JSK base directory
-    ./jsk.py v8 [native or just leave blank for all]
+./jsk.py v8 [native or just leave blank for all]
 
 Build JSK
 ----------
 Go to JSK base directory
-    ./jsk.py build
+./jsk.py build
 
 Run
 ----
 Go to JSK base directory
-    ./jsk.py run
-	./jsk.py run [filename]
+./jsk.py run
+./jsk.py run [filename]
 
 
 Todos:
