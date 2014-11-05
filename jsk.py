@@ -37,9 +37,14 @@ def get_ccs():
 
 def main():
   if (len(sys.argv) < 2):
-    print('Missing argument type: build|run')
+    print('Missing argument type: v8|build|run')
     return
   build_type = sys.argv[1]
+  if (build_type == 'v8'):
+    make_type = sys.argv[2]
+    print("Building V8 engine...")
+    os.system('cd deps/v8')
+    os.system('make -C deps/v8 ' + make_type)
   if (build_type == 'build'):
     print("Pulling in resources...AKA, all of the JS files")
     os.system('tools/js2c.py src/js_natives.h src/resources/resources.jsk');
@@ -57,9 +62,9 @@ def main():
   if (build_type == 'run'):
     print("Running Shoelace...")
     if (len(sys.argv) > 2):
-      os.system("build/shoelace " + sys.argv[2])
+      os.system("build/jsk " + sys.argv[2])
     else:
-      os.system("build/shoelace")
+      os.system("build/jsk")
     
 
 if __name__ == "__main__":
