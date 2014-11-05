@@ -96,7 +96,8 @@ Go to JSK base directory
 Build JSK
 ----------
 Go to JSK base directory
-./jsk.py build
+- Windows: ./jsk.py build
+- Mac: ./jsk.py build darwin
 
 Run
 ----

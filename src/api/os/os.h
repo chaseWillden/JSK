@@ -26,9 +26,10 @@
 
 #ifdef _WIN32
 #include <windows.h>
-#elif MACOS
+#elif __APPLE__
 #include <sys/param.h>
 #include <sys/sysctl.h>
+#include <unistd.h>
 #else
 #include <unistd.h>
 

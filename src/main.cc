@@ -28,14 +28,10 @@
 #include "../deps/v8/include/v8.h"
 #include "common/macros.h"
 #include "include/include.h"
-#include "common/format/format.h"
 #include "common/globals/globals.h"
 #include "common/env.h"
 
-#include <assert.h>
-#include <fcntl.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 using namespace v8;

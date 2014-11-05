@@ -67,7 +67,7 @@ namespace JSK{
 			    SYSTEM_INFO info;
 			    GetSystemInfo(&sysinfo);
 			    numOfCpus = sysinfo.dwNumberOfProcessors;
-			#elif MACOS
+			#elif __APPLE__
 			    int nm[2];
 			    size_t len = 4;
 			    uint32_t count;

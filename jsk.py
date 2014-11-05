@@ -21,6 +21,7 @@
 #  USE OR OTHER DEALINGS IN THE SOFTWARE.
 import os
 import sys
+import platform
 
 def get_ccs():
   return [
@@ -32,7 +33,14 @@ def get_ccs():
     'src/api/shell/shell.cc',
     'src/common/globals/globals.cc',
     'src/api/socket/socket.cc',
-    'src/common/env.cc'
+    'src/common/env.cc',
+    'src/api/window/window.cc',
+    'src/api/window/window.mm'
+  ]
+
+def get_objc():
+  return [
+    'src/api/window/window.mm'
   ]
 
 def main():
@@ -55,6 +63,12 @@ def main():
     ccs = get_ccs()
     for i in ccs:
       middle += ' ' + i
+    build_arch = sys.argv[2]
+    if (build_arch == 'darwin'):
+      objc = get_objc()
+      middle += ' -ObjC++'
+      for i in objc:
+        middle += ' ' + i
 
     post = ' src/main.cc -o build/jsk -stdlib=libstdc++'
     os.system(pre + middle + post)

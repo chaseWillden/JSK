@@ -33,7 +33,7 @@
 
 #ifdef _WIN32
 
-#elif MACOS
+#elif __APPLE__
 
 #else
 #include <unistd.h>

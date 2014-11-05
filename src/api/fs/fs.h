@@ -32,7 +32,7 @@
 
 #ifdef _WIN32
 #include <windows.h>
-#elif MACOS
+#elif __APPLE__
 #include <sys/param.h>
 #include <sys/sysctl.h>
 #else
