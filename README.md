@@ -5,6 +5,7 @@ Another alternative to Node.js. Another purpose to this is to include native OS 
 Supported Features
 ===================
 ```
+var fs = include('fs');
 fs = {
 	inDir: function(dir, filePath){},
 	isDir: function(path),
@@ -18,6 +19,7 @@ fs = {
 	rename: function(oldFilePath, newFilePath)
 }
 
+var os = include('os');
 os = {
 	launch: function(programName),
 	platform: [String],
@@ -25,11 +27,13 @@ os = {
 	hostname: [String]
 }
 
+var shell = include('shell');
 shell = {
 	execute: function(command),
 	print: function(obj)
 }
 
+var http = include('http');
 http = {
 	createServer: function(response, request) // Very buggy right now
 }
@@ -43,6 +47,32 @@ d.text(txt);
 d.addClass(name);
 var htmlString = d.build();
 ```
+
+To include a module, use ```include()``` followed by the module or file path name
+
+*Eample*
+    // Module
+    var fs = include('fs');
+    // File
+    var test = include('test/testFile.js');
+
+To included file assign the return object to the variable send
+
+*Example*
+```
+var test = {
+	a: 'test',
+	b: 1
+};
+
+var send = test;
+```
+
+Global Built in Functions
+-------------------------
+    exit() // Exits program
+    print() // Prints the object
+
 
 Build
 =====
