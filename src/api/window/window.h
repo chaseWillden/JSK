@@ -23,24 +23,26 @@
 #define WINDOW_H_
 
 #include "../../../deps/v8/include/v8.h"
+#include <iostream>
 
 #ifdef _WIN32
 #include <windows.h>
-#if __APPLE__
-#include "window.mm"
-#elif __OBJC__
-	
 #endif
+
+#if __APPLE__
+
+#if __OBJC__
+
 #else
 
+#endif //__OBJC__
 #endif
-#define MAXHOSTNAMELEN 256
-
-using namespace v8;
 
 namespace JSK{
 	namespace WINDOW{
-		int Build(const FunctionCallbackInfo<Value>& args);
+		int Build(const v8::FunctionCallbackInfo<v8::Value>& args);
+		void Alert(const v8::FunctionCallbackInfo<v8::Value>& args);
+
 	}
 }
 

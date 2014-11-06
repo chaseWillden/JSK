@@ -59,7 +59,7 @@ static bool run_shell;
 
 int main(int argc, char* argv[]) {
   Isolate* isolate = env.Init(argc, argv);
-  run_shell = (argc == 1);
+  run_shell = (argc == 1 || argc == 2);
   int result;
   {
     Isolate::Scope isolate_scope(isolate);
@@ -106,7 +106,6 @@ int RunMain(Isolate* isolate, int argc, char* argv[]) {
         continue;
       }
       Local<Value> strt = source;
-      printf("%s\n", TO_CHAR(TO_STRING(strt)));
       if (!env.Execute(true, source, file_name)) return 1;
     }
   }

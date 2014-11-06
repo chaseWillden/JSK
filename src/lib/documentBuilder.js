@@ -25,7 +25,7 @@ function documentBuilder(tagName){
 	this.children = [];
 	this.parent;
 	this.classNames = {};
-	this.txt;
+	this.txt = '';
 }
 
 documentBuilder.prototype.attr = function(name, value){
@@ -65,14 +65,26 @@ documentBuilder.prototype.build = function(){
 	var attr;
 	var className;
 	for (attr in this.attributes){
-		result += ' ' + attr + "'" + this.attributes[attr] + "'";
+		result += ' ' + attr + "='" + this.attributes[attr] + "'";
 	}
 
 	result += ' class=\'';
+	var first = true;
 	for (className in this.classNames){
-		result += ' ' + className;
+		if (!first){
+			result += ' ';
+		}
+		result += className;
+		first = false;
 	}
 	result += '\'';
-	result += ">" + this.text + "</" + this.tagName + ">";
+	result += ">" + this.txt;
+
+	var len = this.children.length;
+	for (var i = 0; i < len; i++){
+		result += this.children[i].build();
+	}
+
+	result += "</" + this.tagName + ">";
 	return result;
 }

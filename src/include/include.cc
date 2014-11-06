@@ -30,6 +30,7 @@
 #include "../common/globals/globals.h"
 #include "../api/socket/socket.h"
 #include "../common/env.h"
+#include "../api/window/window.h"
 #include <string>
 #include <map>
 
@@ -46,13 +47,14 @@ namespace JSK{
 
 	void CallFunc(const char* name, const FunctionCallbackInfo<Value>& args){
 		std::map<const char*, FnPtr> ModMap;
-		const char* nativeMethods = "os|fs|http|format|shell|socket";
+		const char* nativeMethods = "os|fs|http|format|shell|socket|window";
 	    ModMap["os"] = JSK::OS::Build;
 	    ModMap["fs"] = JSK::FS::Build;
 	    ModMap["http"] = JSK::HTTP::Build;
 	    ModMap["format"] = JSK::FORMAT::Build;
 	    ModMap["shell"] = JSK::SHELL::Build;
 	    ModMap["socket"] = JSK::SOCKET::Build;
+	    ModMap["window"] = JSK::WINDOW::Build;
 
 	    // usage:
 	    if (strstr(nativeMethods, name))

@@ -36,8 +36,13 @@ namespace JSK{
 			Handle<Object> global = isolate->GetCurrentContext()->Global();
 			Handle<Object> WindowObj = global->Get(String::NewFromUtf8(isolate, "window"))->ToObject();
 
+			WindowObj->Set(String::NewFromUtf8(isolate, "alert"), Function::New(isolate, Alert));
 			args.GetReturnValue().Set(WindowObj);
 			return 1;
+		}
+
+		void Alert(const FunctionCallbackInfo<Value>& args){
+			
 		}
 	}
 }

@@ -63,7 +63,7 @@ def main():
     for i in ccs:
       middle += ' ' + i
     build_arch = sys.argv[2]
-    if (build_arch == 'darwin'):
+    if (build_arch == 'mac'):
       objc = get_objc()
       middle += ' -ObjC++'
       for i in objc:

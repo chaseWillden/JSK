@@ -156,7 +156,12 @@ namespace JSK{
 				char* name;
 				bool n = true;
 				char* value;
-				header = strtok (const_cast<char*>(this->headers[i]), ":");
+				if (i != 0){
+					header = strtok (const_cast<char*>(this->headers[i]), ":");
+				}
+				else{
+					header = strtok (const_cast<char*>(this->headers[i]), " ");
+				}
 				while (header != NULL) {
 					if (n){
 						name = header;
@@ -164,15 +169,16 @@ namespace JSK{
 					}
 					else{
 						value = header;
+						break;
 					};
-					header = strtok (NULL, ":");
+					if (i != 0)
+						header = strtok (NULL, ":");
+					else
+						header = strtok (NULL, " ");
 				}
-				printf("%s\n", name);
-				printf("%s\n", value);
-				printf("%s\n", " ");
 				if (strlen(value) < 1){
 					Local<Value> strName = String::NewFromUtf8(isolate, name);
-					Local<Value> strValue = String::NewFromUtf8(isolate, "Nope");
+					Local<Value> strValue = String::NewFromUtf8(isolate, " ");
 					this->obj->Set(strName, strValue);
 				}
 				else{

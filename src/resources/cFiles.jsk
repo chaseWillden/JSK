@@ -7,5 +7,4 @@ src/api/shell/shell.cc,
 src/common/globals/globals.cc,
 src/api/socket/socket.cc,
 src/common/env.cc,
-src/api/window/window.cc,
-src/api/window/window.mm
+src/api/window/window.cc
