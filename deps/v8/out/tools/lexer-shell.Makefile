@@ -3,4 +3,4 @@
 export builddir_name ?= ./out/tools/out
 .PHONY: all
 all:
-	$(MAKE) -C .. lexer-shell parser-shell
+	$(MAKE) -C .. parser-shell lexer-shell

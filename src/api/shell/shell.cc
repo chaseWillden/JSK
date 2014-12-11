@@ -45,13 +45,13 @@ namespace JSK{
 
 		void Child(const FunctionCallbackInfo<Value>& args){
 			if (args.Length() != 1 || !args[0]->IsString())
-				return THROW(args, "Invalid Arguments");
-
-			Local<Value> val = args[0];
-			std::string cmd(TO_STRING(val));
-			FILE* pipe = popen(TO_CHAR(cmd), "r");
+				THROW( "Invalid Arguments");
+			else{
+				Local<Value> val = args[0];
+				std::string cmd(TO_STRING(val));
+				FILE* pipe = popen(TO_CHAR(cmd), "r");
 		    if (!pipe)
-		    	return THROW(args, "Unable to open shell");
+		    	THROW( "Unable to open shell");
 		    char buffer[128];
 		    std::string result = "";
 		    while(!feof(pipe)) {
@@ -61,15 +61,17 @@ namespace JSK{
 		    printf("%s\n", TO_CHAR(result));
 		    pclose(pipe);
 		    args.GetReturnValue().Set(String::NewFromUtf8(args.GetIsolate(), TO_CHAR(result)));
+			}
 		}
 
 		void Print(const FunctionCallbackInfo<Value>& args){
 			if (args.Length() != 1 || !args[0]->IsString())
-				return THROW(args, "Invalid Arguments");
-
-			Local<Value> val = args[0];
-			std::string str(TO_STRING(val));
-			printf("%s\n", TO_CHAR(str));
+				THROW( "Invalid Arguments");
+			else{
+				Local<Value> val = args[0];
+				std::string str(TO_STRING(val));
+				printf("%s\n", TO_CHAR(str));
+			}
 		}	
 	}
 }

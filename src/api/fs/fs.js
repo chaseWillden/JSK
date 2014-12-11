@@ -32,8 +32,13 @@ var fs = {
 		return false;
 	},
 	isDir: function(path){
-		var info = fs.fileInfo(path);
-		return info.isDir;
+		try(
+			var info = fs.fileInfo(path);
+			return info.isDir;
+		)
+		catch(e){
+			return e;
+		}
 	},
 	deleteDir: function(path){
 		if (!fs.isDir(path))
@@ -53,5 +58,18 @@ var fs = {
 					success++;
 			}
 		}
+	},
+	gui: function(current){
+		var os = include('os');
+		if (os.platform == 'Apple')
+			if (current)
+				os.launch('.');
+			else
+				os.launch('Finder');
+		else if (os.platform == 'Windows')
+			if (current)
+				os.launch('.');
+			else
+				os.launch('Explorer');
 	}
 }

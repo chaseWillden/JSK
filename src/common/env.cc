@@ -33,12 +33,13 @@ namespace JSK{
 
 	Isolate* Env::Init(int argc, char* argv[]){
 		V8::InitializeICU();
-  		V8::Initialize();
-  		V8::SetFlagsFromCommandLine(&argc, argv, true);
-	  	ShellArrayBufferAllocator array_buffer_allocator;
-	  	V8::SetArrayBufferAllocator(&array_buffer_allocator);
-	  	this->mainIsolate = Isolate::New();
-	  	return this->mainIsolate;
+		V8::Initialize();
+		if (argc > 0)
+			V8::SetFlagsFromCommandLine(&argc, argv, true);
+  	ShellArrayBufferAllocator array_buffer_allocator;
+  	V8::SetArrayBufferAllocator(&array_buffer_allocator);
+  	this->mainIsolate = Isolate::New();
+  	return this->mainIsolate;
 	}
 
 	Isolate* Env::GetIsolate(){

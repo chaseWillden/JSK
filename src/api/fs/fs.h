@@ -54,6 +54,10 @@ namespace JSK{
 		void ReadDir(const FunctionCallbackInfo<Value>& args);
 		void Write(const FunctionCallbackInfo<Value>& args);
 		void Rename(const FunctionCallbackInfo<Value>& args);
+		Handle<Object> File_DB();
+
+		// DB object
+		void DBSave(const FunctionCallbackInfo<Value>& args);
 	}
 }
 

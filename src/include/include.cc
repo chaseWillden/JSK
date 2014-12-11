@@ -24,11 +24,9 @@
 #include "../js_natives.h"
 #include "../api/os/os.h"
 #include "../api/fs/fs.h"
-#include "../api/http/http.h"
 #include "../common/format/format.h"
 #include "../api/shell/shell.h"
 #include "../common/globals/globals.h"
-#include "../api/socket/socket.h"
 #include "../common/env.h"
 #include "../api/window/window.h"
 #include <string>
@@ -47,13 +45,11 @@ namespace JSK{
 
 	void CallFunc(const char* name, const FunctionCallbackInfo<Value>& args){
 		std::map<const char*, FnPtr> ModMap;
-		const char* nativeMethods = "os|fs|http|format|shell|socket|window";
+		const char* nativeMethods = "os|fs|format|shell|window";
 	    ModMap["os"] = JSK::OS::Build;
 	    ModMap["fs"] = JSK::FS::Build;
-	    ModMap["http"] = JSK::HTTP::Build;
 	    ModMap["format"] = JSK::FORMAT::Build;
 	    ModMap["shell"] = JSK::SHELL::Build;
-	    ModMap["socket"] = JSK::SOCKET::Build;
 	    ModMap["window"] = JSK::WINDOW::Build;
 
 	    // usage:
@@ -101,7 +97,7 @@ namespace JSK{
 			JSK::Env env;
 			Local<Value> objVal = env.ReadAndExecute(false, module);
 			if (objVal->IsUndefined() || objVal->IsNull())
-				THROW(args, "Module does not exist");
+				THROW( "Module does not exist");
 			else{
 				Local<Object> obj = env.GetContext()->Global();
 				args.GetReturnValue().Set(obj->Get(String::NewFromUtf8(env.GetIsolate(), "send")));	

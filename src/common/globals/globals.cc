@@ -44,7 +44,7 @@ namespace JSK{
 		// https://code.google.com/p/v8-juice/source/browse/trunk/src/include/v8/juice/time.h
 		void SetTimeOut(const FunctionCallbackInfo<Value>& args){
 			if (args.Length() < 1 && args[0]->IsFunction())
-				THROW(args, "Invalid arguments");
+				THROW( "Invalid arguments");
 
 		}
 	}

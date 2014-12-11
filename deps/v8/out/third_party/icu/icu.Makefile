@@ -3,4 +3,4 @@
 export builddir_name ?= ./out/third_party/icu/out
 .PHONY: all
 all:
-	$(MAKE) -C ../.. icudata icuuc icui18n
+	$(MAKE) -C ../.. icudata icudata icuuc icui18n icuuc icui18n

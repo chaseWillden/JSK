@@ -3,4 +3,4 @@
 export builddir_name ?= ./out/samples/out
 .PHONY: all
 all:
-	$(MAKE) -C .. lineprocessor process shell
+	$(MAKE) -C .. lineprocessor shell process

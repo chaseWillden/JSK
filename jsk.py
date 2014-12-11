@@ -57,7 +57,7 @@ def main():
     os.system('tools/js2c.py src/js_natives.h src/resources/nativeJs.jsk');
     print("Completed")
     print("Building System")
-    pre = 'clang++ -lcurl -Iinclude deps/v8/out/native/libv8_base.a deps/v8/out/native/libv8_libbase.a deps/v8/out/native/libv8_snapshot.a deps/v8/out/native/libicudata.a deps/v8/out/native/libicuuc.a deps/v8/out/native/libicui18n.a'
+    pre = 'clang++ -lcurl -lcares -Iinclude deps/v8/out/native/libv8_base.a deps/v8/out/native/libv8_libbase.a deps/v8/out/native/libv8_snapshot.a deps/v8/out/native/libicudata.a deps/v8/out/native/libicuuc.a deps/v8/out/native/libicui18n.a'
     middle = ''
     ccs = get_ccs()
     for i in ccs:

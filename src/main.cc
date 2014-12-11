@@ -105,7 +105,6 @@ int RunMain(Isolate* isolate, int argc, char* argv[]) {
         fprintf(stderr, "Error reading '%s'\n", str);
         continue;
       }
-      Local<Value> strt = source;
       if (!env.Execute(true, source, file_name)) return 1;
     }
   }
@@ -137,7 +136,7 @@ Handle<String> ReadFile(Isolate* isolate, const char* name) {
 
 // The read-eval-execute loop of the shell.
 void RunShell(Handle<Context> context) {
-  fprintf(stderr, "Welcome to Shoelace\n");
+  fprintf(stderr, "Welcome to JSK\n");
   static const int kBufferSize = 256;
   // Enter the execution environment before evaluating any code.
   Context::Scope context_scope(context);

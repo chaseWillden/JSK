@@ -60,8 +60,13 @@ namespace JSK{
 	#define TO_CHAR JSK::TO_CHAR
 
 	// Macro for throwing an exception
-	inline void THROW(const FunctionCallbackInfo<Value>& args, const char* msg) {
-	  args.GetIsolate()->ThrowException(String::NewFromUtf8(args.GetIsolate(), msg));
+	inline void THROW(const char* msg) {
+		Isolate* isolate = Isolate::GetCurrent();
+	  if (!isolate){
+	  	isolate = Isolate::New();
+	  	isolate->Enter();
+	  }
+	  isolate->ThrowException(String::NewFromUtf8(isolate, msg));
 	}
 	#define THROW JSK::THROW
 }

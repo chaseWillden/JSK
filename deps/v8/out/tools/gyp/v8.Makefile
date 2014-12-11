@@ -3,4 +3,4 @@
 export builddir_name ?= ./out/tools/gyp/out
 .PHONY: all
 all:
-	$(MAKE) -C ../.. js2c v8_libbase v8_libplatform v8_base v8_nosnapshot mksnapshot v8_snapshot v8
+	$(MAKE) -C ../.. js2c v8_libbase v8_libbase v8_libplatform v8_libplatform v8_base v8_nosnapshot mksnapshot v8_base v8_snapshot v8
