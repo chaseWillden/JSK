@@ -48,14 +48,14 @@ namespace JSK{
 				THROW( "Invalid Arguments");
 			else{
 				Local<Value> val = args[0];
-				std::string cmd(TO_STRING(val));
-				FILE* pipe = popen(TO_CHAR(cmd), "r");
+				const char* cmd = TO_STRING(val);
+				FILE* pipe = popen(cmd, "r");
 		    if (!pipe)
 		    	THROW( "Unable to open shell");
-		    char buffer[128];
+		    char buffer[256];
 		    std::string result = "";
 		    while(!feof(pipe)) {
-		    	if(fgets(buffer, 128, pipe) != NULL)
+		    	if(fgets(buffer, 256, pipe) != NULL)
 		    		result += buffer;
 		    }
 		    printf("%s\n", TO_CHAR(result));
@@ -69,8 +69,8 @@ namespace JSK{
 				THROW( "Invalid Arguments");
 			else{
 				Local<Value> val = args[0];
-				std::string str(TO_STRING(val));
-				printf("%s\n", TO_CHAR(str));
+				const char* str = TO_STRING(val);
+				printf("%s\n", str);
 			}
 		}	
 	}

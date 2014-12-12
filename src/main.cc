@@ -59,7 +59,7 @@ static bool run_shell;
 
 int main(int argc, char* argv[]) {
   Isolate* isolate = env.Init(argc, argv);
-  run_shell = (argc == 1 || argc == 2);
+  run_shell = (argc == 1);
   int result;
   {
     Isolate::Scope isolate_scope(isolate);
@@ -101,7 +101,7 @@ int RunMain(Isolate* isolate, int argc, char* argv[]) {
       // Use all other arguments as names of files to load and run.
       Handle<String> file_name = String::NewFromUtf8(isolate, str);
       Handle<String> source = ReadFile(isolate, str);
-      if (source.IsEmpty()) {
+      if (source.IsEmpty() || file_name.IsEmpty()) {
         fprintf(stderr, "Error reading '%s'\n", str);
         continue;
       }
@@ -128,7 +128,7 @@ Handle<String> ReadFile(Isolate* isolate, const char* name) {
   }
   fclose(file);
   Handle<String> result =
-      String::NewFromUtf8(isolate, chars, String::kNormalString, size);
+      String::NewFromUtf8(isolate, chars);
   delete[] chars;
   return result;
 }

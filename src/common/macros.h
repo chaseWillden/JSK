@@ -59,16 +59,74 @@ namespace JSK{
 	}
 	#define TO_CHAR JSK::TO_CHAR
 
+	inline void REPORT(TryCatch* try_catch){
+		Isolate* isolate = Isolate::GetCurrent();
+		HandleScope handle_scope(isolate);
+
+		Local<Value> val = try_catch->Exception();	
+		const char* exception_string = TO_STRING(val);
+		Handle<Message> message = try_catch->Message();
+
+		if (message.IsEmpty())
+			fprintf(stderr, "%s\n", exception_string);
+		else {
+			Local<Value> filename = message->GetScriptOrigin().ResourceName();
+
+			const char* filename_string = TO_CHAR(TO_STRING(filename));
+			int linenum = message->GetLineNumber();
+			fprintf(stderr, "%s:%i: %s\n", filename_string, linenum, exception_string);
+
+			// Print line of source code.
+			Local<Value> sourceline = message->GetSourceLine();
+			const char* sourceline_string = TO_CHAR(TO_STRING(sourceline));
+			fprintf(stderr, "%s\n", sourceline_string);
+
+			int start = message->GetStartColumn();
+			for (int i = 0; i < start; i++) {
+			  fprintf(stderr, " ");
+			}
+			int end = message->GetEndColumn();
+			for (int i = start; i < end; i++) {
+			  fprintf(stderr, "^");
+			}
+			fprintf(stderr, "\n");
+
+			Local<Value> stack_trace = try_catch->StackTrace();
+			if (!stack_trace->IsUndefined() || !stack_trace->IsNull()) {
+			  const char* stack_trace_string = TO_CHAR(TO_STRING(stack_trace));
+			  fprintf(stderr, "%s\n", stack_trace_string);
+			  delete stack_trace_string;
+			}
+
+			delete filename_string;
+			delete sourceline_string;
+		}
+	}
+	#define REPORT JSK::REPORT
+
 	// Macro for throwing an exception
 	inline void THROW(const char* msg) {
+		printf("%s\n", msg);
 		Isolate* isolate = Isolate::GetCurrent();
 	  if (!isolate){
 	  	isolate = Isolate::New();
 	  	isolate->Enter();
 	  }
 	  isolate->ThrowException(String::NewFromUtf8(isolate, msg));
+	  TryCatch try_catch;
+	  REPORT(&try_catch);
 	}
 	#define THROW JSK::THROW
+
+	// Macro for getting the isolate
+	inline Isolate* ISOLATE(){
+		Isolate* isolate = Isolate::GetCurrent();
+	  if (!isolate){
+	  	return NULL;
+	  }
+	  return isolate;
+	}
+	#define ISOLATE JSK::ISOLATE
 }
 
 #endif

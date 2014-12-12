@@ -32,13 +32,8 @@ var fs = {
 		return false;
 	},
 	isDir: function(path){
-		try(
-			var info = fs.fileInfo(path);
-			return info.isDir;
-		)
-		catch(e){
-			return e;
-		}
+		var info = fs.fileInfo(path);
+		return info.isDir;
 	},
 	deleteDir: function(path){
 		if (!fs.isDir(path))
@@ -71,5 +66,40 @@ var fs = {
 				os.launch('.');
 			else
 				os.launch('Explorer');
+	},
+	exists: function(path){
+		if (!path)
+			throw new String('Invalid path');
+		var filename;
+		var contents;
+		var split;
+
+		var os = include('os');
+		if (os.platform == "Windows"){
+			split = path.split('\\');
+		}
+		else{
+			split = path.split('/');
+		}
+
+		if (split.length > 1){
+			filename = split[split.length - 1];
+			var stitch = '';
+			for (var i = 0; i < split.length; i++){
+				if (i < split.length - 1)
+					stitch += split[i];
+			}
+			contents = fs.readDir(stitch);
+		}
+		else{
+			filename = path
+			contents = fs.readDir("./");
+		}
+
+		for (var i = 0; i < contents.length; i++){
+			if (contents[i] == filename)
+				return true;
+		}
+		return false;
 	}
 }

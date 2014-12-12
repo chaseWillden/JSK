@@ -19,10 +19,16 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 // USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-function print(obj){
-	var format = include('format');
-	var result = format.console(obj);
-	
-	var shell = include('shell');
-	shell.print(result);
+function print(obj, discludeType){
+	if (discludeType && (typeof obj == 'string' || typeof obj == 'number')){
+		var shell = include('shell');
+		shell.print(obj);
+	}
+	else{
+		var format = include('format');
+		var result = format.console(obj);
+		var shell = include('shell');
+		if (typeof obj == 'string')
+		 	shell.print(obj);
+	}
 }

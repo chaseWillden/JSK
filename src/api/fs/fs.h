@@ -46,7 +46,7 @@ namespace JSK{
 	namespace FS{
 		int Build(const FunctionCallbackInfo<Value>& args);
 		void FileExists(const FunctionCallbackInfo<Value>& args);
-		bool FileExists(std::string filename);
+		bool FileExists(const char* filename);
 		Handle<String> ReadFile(Isolate* isolate, const char* name);
 		void FileInfo(const FunctionCallbackInfo<Value>& args);
 		void Open(const FunctionCallbackInfo<Value>& args);

@@ -55,7 +55,6 @@ namespace JSK{
             Handle<Object> FSObject = global->Get(String::NewFromUtf8(isolate, "fs"))->ToObject();
 
             // Populate the object components
-            FSObject->Set(String::NewFromUtf8(isolate, "exists"), Function::New(isolate, FileExists));
             FSObject->Set(String::NewFromUtf8(isolate, "open"), Function::New(isolate, Open));
             FSObject->Set(String::NewFromUtf8(isolate, "fileInfo"), Function::New(isolate, FileInfo));
             FSObject->Set(String::NewFromUtf8(isolate, "deleteFile"), Function::New(isolate, DeleteFile));
@@ -70,27 +69,17 @@ namespace JSK{
         }
 
         /*
-        * Mask Function called within the object. 
-        * Calls: fs.exists(path)
-        * returns boolean
-        */
-        void FileExists(const FunctionCallbackInfo<Value>& args){           
-            if (args.Length() != 1 || !args[0]->IsString())
-                THROW( "Invalid Arguments");
-
-            else{
-                Local<Value> val = args[0];
-                std::string filename(TO_STRING(val));
-                args.GetReturnValue().Set(Boolean::New(args.GetIsolate(), FileExists(filename)));
-            } 
-        }
-
-        /*
         * Finds if the file exists or not
         */
-        bool FileExists(std::string filename){
-            struct stat buf;
-            return stat(filename.c_str(), &buf) != -1;
+        bool FileExists(const char* filename){
+            FILE *file;
+            file = fopen(filename, "rb");
+            if (file){
+                fclose(file);
+                return true;
+            }
+            fclose(file);
+            return false;
         }
 
         /*
@@ -128,21 +117,23 @@ namespace JSK{
         void Open(const FunctionCallbackInfo<Value>& args){
             if (args.Length() < 1 || !args[0]->IsString())
                 THROW( "Invalid Arguments");
-
             else{
                 Local<Value> val = args[0];
                 const char* strVal = TO_STRING(val);
 
                 // Check if file exists
-                if (!FileExists(strVal))
+                if (!FileExists(strVal)){
                     THROW( "File doesn't exist");
-                std::string filename(strVal);
+                }
+                else{
 
-                // Read the file to a v8 string
-                Handle<String> contents = ReadFile(args.GetIsolate(), TO_CHAR(filename));
-                if (contents->Length() < 1)
-                    THROW( "Empty File");
-                args.GetReturnValue().Set(contents);
+                    // Read the file to a v8 string
+                    Handle<String> contents = ReadFile(args.GetIsolate(), strVal);
+                    if (contents->Length() < 1)
+                        THROW( "Empty File");
+                    else
+                        args.GetReturnValue().Set(contents);
+                }
             }
         }
 
@@ -209,6 +200,10 @@ namespace JSK{
                             Local<Object> fileObj = Object::New(args.GetIsolate());
                             fileObj->Set(String::NewFromUtf8(args.GetIsolate(), "size"), Number::New(args.GetIsolate(), ent->d_reclen));
                             fileObj->Set(String::NewFromUtf8(args.GetIsolate(), "name"), String::NewFromUtf8(args.GetIsolate(), ent->d_name));
+                            if (ent->d_type == 4)
+                                fileObj->Set(String::NewFromUtf8(args.GetIsolate(), "type"), String::NewFromUtf8(args.GetIsolate(), "dir"));
+                            else
+                                fileObj->Set(String::NewFromUtf8(args.GetIsolate(), "type"), String::NewFromUtf8(args.GetIsolate(), "file"));
                             dirObj->Set(Number::New(args.GetIsolate(), i++), fileObj);
                         }
                         else
@@ -229,17 +224,20 @@ namespace JSK{
         void Write(const FunctionCallbackInfo<Value>& args){
             if (args.Length() < 2 || !args[0]->IsString())
                 THROW( "Invalid Arguments");
-
             else{
                 Local<Value> val = args[0];
-                std::string filename(TO_STRING(val));
-                Local<Value> contents = args[1];
-                std::string str(TO_STRING(contents));
-                std::ofstream file(TO_CHAR(filename));
-                file.open(TO_CHAR(filename));
-                file << str;
-                file.close();
-                args.GetReturnValue().Set(Boolean::New(args.GetIsolate(), true));
+                const char* filename = TO_STRING(val);
+                Local<Value> preContents = args[1];
+                const char* contents = TO_STRING(preContents);
+                std::ofstream file(filename);
+                if (file.is_open()){
+                    file << contents;
+                    file.close();
+                    args.GetReturnValue().Set(Boolean::New(args.GetIsolate(), true));
+                }
+                else{
+                    args.GetReturnValue().Set(Boolean::New(args.GetIsolate(), false));
+                }
             }
         }
 
@@ -249,13 +247,14 @@ namespace JSK{
 
             else{
                 Local<Value> old = args[0];
-                std::string oldname(TO_STRING(old));
+                const char* oldname = TO_STRING(old);
                 Local<Value> n = args[1];
-                std::string newname(TO_STRING(n));
+                const char* newname = TO_STRING(n);
 
-                int success = rename(TO_CHAR(oldname), TO_CHAR(newname));
-                if (success == 0)
-                    args.GetReturnValue().Set(Boolean::New(args.GetIsolate(), success == 0));
+                int success = rename(oldname, newname);
+                if (success == 0){
+                    args.GetReturnValue().Set(Boolean::New(args.GetIsolate(), true));
+                }
                 else
                     THROW( &"Error code: " [success]);  
             }   
@@ -271,11 +270,14 @@ namespace JSK{
         }
 
         void DBSave(const FunctionCallbackInfo<Value>& args){
-            if (args.Length() < 2 || !args[0]->IsString() || !args[1]->IsString())
-                THROW( "Invalid arguments");
-            else{
-                THROW( "Under Construction");
-            }
+            printf("%s\n", "pre");
+            // if (args.Length() < 2 || !args[0]->IsString() || !args[1]->IsString()){
+            //     printf("%s\n", "Throwing");
+            //     THROW("Invalid arguments");
+            // }
+            // else{
+            //     THROW("Under Construction");
+            // }
         }
     }
 }

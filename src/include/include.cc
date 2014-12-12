@@ -51,7 +51,6 @@ namespace JSK{
 	    ModMap["format"] = JSK::FORMAT::Build;
 	    ModMap["shell"] = JSK::SHELL::Build;
 	    ModMap["window"] = JSK::WINDOW::Build;
-
 	    // usage:
 	    if (strstr(nativeMethods, name))
 	    	ModMap[name](args);
@@ -66,25 +65,39 @@ namespace JSK{
 		}
 		Local<Value> val = args[0];
 		const char* module = TO_STRING(val);
-
-		Handle<Value> printObj = args.GetIsolate()->GetCurrentContext()->Global()->Get(String::NewFromUtf8(args.GetIsolate(), "print"));
-
 		bool IsRegisteredModule = false;
 		for (int i = 0; natives[i].name; i++){
 			if (IsRegisteredModule) break;
 
 			// Creates global function
-			if (!printObj->IsObject() && strcmp(natives[i].name, "print") == 0){
+			if (strcmp(natives[i].name, "print") == 0){
+				Handle<Value> printObj = args.GetIsolate()->GetCurrentContext()->Global()->Get(String::NewFromUtf8(args.GetIsolate(), "print"));
+				if (printObj->IsObject()){
+					delete[] module;
+					break;
+				}
 				Script::Compile(String::NewFromUtf8(args.GetIsolate(), natives[i].source))->Run();
 				IsRegisteredModule = true;
 			}
 
 			// returns an object
 			else if (strcmp(module, natives[i].name) == 0){
+				Handle<Value> moduleObj = args.GetIsolate()->GetCurrentContext()->Global()->Get(String::NewFromUtf8(args.GetIsolate(), module));
+				if (moduleObj->IsObject()){
+					delete[] module;
+					break;
+				}
 				Local<Context> current = Context::New(args.GetIsolate());
 				// Create a new context so you cant acces this outside of the scope
 				current->Enter();
-				Script::Compile(String::NewFromUtf8(args.GetIsolate(), natives[i].source))->Run();
+				Handle<Script> script = Script::Compile(String::NewFromUtf8(args.GetIsolate(), natives[i].source));
+				if (script.IsEmpty()){
+					printf("%s\n", "Internal Error");
+					exit(1);
+				}				
+				else{
+					script->Run();
+				}	
 				CallFunc(natives[i].name, args);
 				IsRegisteredModule = true;
 				BuildEnv(current->GetIsolate(), current->Global());
@@ -97,7 +110,7 @@ namespace JSK{
 			JSK::Env env;
 			Local<Value> objVal = env.ReadAndExecute(false, module);
 			if (objVal->IsUndefined() || objVal->IsNull())
-				THROW( "Module does not exist");
+				THROW("Module does not exist");
 			else{
 				Local<Object> obj = env.GetContext()->Global();
 				args.GetReturnValue().Set(obj->Get(String::NewFromUtf8(env.GetIsolate(), "send")));	

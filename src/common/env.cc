@@ -93,7 +93,6 @@ namespace JSK{
 
 		TryCatch try_catch;
 		ScriptOrigin origin(name);
-
 		Handle<Script> script = Script::Compile(code, &origin);
 		if (script.IsEmpty()){
 			this->Report(&try_catch);
@@ -112,13 +111,14 @@ namespace JSK{
 
 					// Print the results
 					Local<Value> strCode = code;
-					std::string resultsStr(TO_CHAR(TO_STRING(strCode)));
+					std::string resultsStr(TO_STRING(strCode));
 					char* resultsChar = const_cast<char*>(TO_CHAR(TO_STRING(strCode)));
 					std::string searchStr(resultsChar);
 					if (searchStr.find("=") != std::string::npos){
 						return true;
 					}
 					else{
+						resultsStr.replace(resultsStr.begin(), resultsStr.end(), ';', ' ');
 						std::string pre("print(");
 						std::string post(")");
 						std::string stitch = pre + resultsStr + post;
